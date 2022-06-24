@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: tloypythontestks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tloypythontestks
+  template:
+    metadata:
+      labels:
+        app: tloypythontestks 
+    spec:
+      containers:
+        - name: tloypythontestks 
+          image: readinessregistry.azurecr.io/tloypythontestks
+          ports:
+          - containerPort: 5000
